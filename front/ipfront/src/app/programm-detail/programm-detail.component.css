@@ -1,0 +1,114 @@
+body {
+    background-color: #e0e0e0; 
+    margin: 0; 
+    padding: 0; 
+  }
+  
+  .rss-feed-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto; 
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .rss-card {
+    max-width: 400px;        /* Adjusted for a compact card */
+    width: 100%;             /* Full width with max-width cap */
+    padding: 16px;           /* Standard padding for content */
+    background-color: #d1c4e9; 
+    margin-bottom: 20px;     /* Spacing between cards */
+    border-radius: 8px;      /* Rounded corners for the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    cursor: pointer;         /* Pointer cursor to indicate clickability */
+    transition: transform 0.2s ease-in-out;  /* Smooth transform effect */
+  }
+  
+  .rss-card:hover {
+    transform: scale(1.05);  /* Slightly enlarge card on hover */
+  }
+  
+  mat-card-title {
+    font-size: 20px;         /* Larger title text */
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  mat-card-subtitle {
+    color: #757575;          /* Subtle color for the subtitle */
+  }
+  
+  mat-card-content p {
+    margin: 4px 0;           /* Consistent spacing between paragraphs */
+  }
+  
+  mat-card-content p:last-child {
+    margin-bottom: 0;        /* No bottom margin for the last paragraph */
+  }
+  
+
+
+.questions-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.questions-table th, .questions-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.questions-table th {
+  background-color: #f2f2f2;
+}
+
+.questions-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+.mat-input-element {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button.mat-button {
+  padding: 5px 10px;
+}
+
+.questions-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.questions-table th, .questions-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.questions-table th {
+  background-color: #f2f2f2;
+}
+
+.questions-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+.new-question-container {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.new-question-input {
+  flex: 1;
+  margin-right: 20px;
+}
+
+button.mat-raised-button {
+  padding: 10px 20px;
+}

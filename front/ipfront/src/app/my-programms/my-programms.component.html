@@ -1,0 +1,17 @@
+  <div class="rss-feed-container">
+      <mat-card *ngFor="let item of items" class="rss-card" (click)="details(item)">
+        <mat-card-header>
+          <mat-card-title>{{ item.name }}</mat-card-title>
+          <mat-card-subtitle>{{ item.price | currency }}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="'data:image/jpeg;base64,' + item.picture" alt="{{ item.name }}">
+        <mat-card-actions>
+          <button mat-button color="warn" (click)="deleteItem(item, $event)">Delete</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <div class="create-programm-button">
+        <button mat-fab color="primary" (click)="createProgramm()">
+          <mat-icon>add</mat-icon>
+        </button>
+      </div>

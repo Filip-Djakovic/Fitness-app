@@ -1,0 +1,16 @@
+<div class="rss-feed-container">
+    <mat-card *ngFor="let item of items" class="rss-card">
+      <mat-card-header>
+        <mat-card-title>{{ item.title }}</mat-card-title>
+        <!-- Display the chip directly without mat-chip-list -->
+        <mat-chip color="primary">{{ item.category }}</mat-chip>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ item.description }}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <a mat-button color="primary" [href]="item.link" target="_blank">Read More</a>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  

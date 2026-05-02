@@ -1,0 +1,47 @@
+    .rss-feed-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto; 
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .rss-card {
+    max-width: 400px; 
+    width: 100%;
+    padding: 16px;
+    background-color: #d1c4e9; 
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .rss-card:hover {
+    transform: scale(1.05);
+  }
+  
+  mat-card-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  mat-card-subtitle {
+    color: #757575;
+  }
+  
+  mat-card-content p {
+    margin: 4px 0;
+  }
+  
+  mat-card-content p:last-child {
+    margin-bottom: 0;
+  }
+  .create-programm-button {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+  }

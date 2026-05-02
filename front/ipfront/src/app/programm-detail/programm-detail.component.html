@@ -1,0 +1,56 @@
+<div class="rss-feed-container">
+    <mat-card *ngIf="item">
+      <mat-card-header>
+        <mat-card-title>{{ item.name }}</mat-card-title>
+        <mat-card-subtitle>{{ item.price | currency }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ item.description }}</p>
+        <p>Level: {{ item.level }}</p>
+        <p>Time: {{ item.time }} minutes</p>
+        <p>Category: {{ item.category.name }}</p>
+        <p>Location: {{ item.location.name }}</p>
+        <p>Instructor: {{ item.instructor.name }}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div>
+    <table class="questions-table">
+      <thead>
+        <tr>
+          <th>User Name</th>
+          <th>Text</th>
+          <th>Response</th>
+          <th>Update</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let question of questions">
+          <td>{{ question.user.name }}</td>
+          <td>{{ question.text }}</td>
+          <td>
+            <input matInput [(ngModel)]="question.response">
+          </td>
+          <td>
+            <button mat-button color="primary" (click)="updateResponse(question)">Update</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="new-question-container">
+    <mat-form-field class="new-question-input">
+      <mat-label>New Question Text</mat-label>
+      <input matInput [(ngModel)]="newQuestionText">
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="createQuestion()">Create Question</button>
+</div>
+<div class="participate-container">
+  <mat-form-field class="participate-input">
+    <mat-label>Number of card</mat-label>
+    <input matInput [(ngModel)]="participateText">
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="participate()">Participate</button>
+</div>

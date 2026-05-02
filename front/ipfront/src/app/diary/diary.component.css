@@ -1,0 +1,26 @@
+.message-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  .message-card {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+  }
+  
+  .mat-form-field {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  button {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  button:last-of-type {
+    margin-top: 20px;
+  }

@@ -1,0 +1,19 @@
+<div class="message-container">
+    <mat-card class="message-card">
+      <mat-card-title>Send Message</mat-card-title>
+      <mat-card-content>
+        <form (ngSubmit)="onSendMessage()" #messageForm="ngForm">
+          <!-- Message Input Field -->
+          <mat-form-field appearance="fill">
+            <mat-label>Message</mat-label>
+            <textarea matInput required [(ngModel)]="message" name="message"></textarea>
+            <mat-error *ngIf="messageForm.submitted && !message">Message is required</mat-error>
+          </mat-form-field>
+  
+          <!-- Submit Button -->
+          <button mat-raised-button color="primary" type="submit">Send</button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  

@@ -1,0 +1,28 @@
+.message-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Centers the form vertically and horizontally */
+    background-color: #f5f5f5; /* Light background color */
+  }
+  
+  .message-card {
+    width: 400px; /* Card width */
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for the card */
+  }
+  
+  .mat-form-field {
+    width: 100%; /* Make form fields take up the full width */
+    margin-bottom: 16px; /* Space between form fields */
+  }
+  
+  textarea {
+    min-height: 100px; /* Ensure the textarea is big enough */
+  }
+  
+  button[type="submit"] {
+    width: 100%; /* Full-width submit button */
+    margin-top: 10px; /* Space between textarea and button */
+  }
+  

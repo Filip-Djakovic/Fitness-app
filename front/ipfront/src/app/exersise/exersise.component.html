@@ -1,0 +1,10 @@
+<div class="exercise-container">
+    <mat-card *ngFor="let exercise of exercises" class="exercise-card">
+      <mat-card-title>{{ exercise.name }}</mat-card-title>
+      <mat-card-content>
+        <p><strong>Difficulty:</strong> {{ exercise.difficulty }}</p>
+        <p><strong>Instructions:</strong> {{ exercise.instructions }}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  

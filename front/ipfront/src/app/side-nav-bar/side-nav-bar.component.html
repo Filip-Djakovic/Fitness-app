@@ -1,0 +1,43 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #sidenav class="sidenav" mode="side" opened>
+      <mat-nav-list>
+        <mat-list-item (click)="goTo('rssFeed')">
+          <mat-icon>home</mat-icon>&nbsp;
+          <span>Pocetna</span>
+        </mat-list-item>
+        <mat-list-item (click)="goTo('programm')">
+            <mat-icon>information</mat-icon>&nbsp;
+            <span>Programi</span>
+        </mat-list-item>
+        <mat-list-item (click)="goTo('update')">
+          <mat-icon>settings</mat-icon>&nbsp;
+          <span>Podesavanja</span>
+      </mat-list-item>
+      <mat-list-item (click)="goTo('myProgramms')">
+        <mat-icon>information</mat-icon>&nbsp;
+        <span>Moji programi</span>
+    </mat-list-item>
+    <mat-list-item (click)="goTo('message')">
+      <mat-icon>message</mat-icon>&nbsp;
+      <span>Savjetovanje</span>
+   </mat-list-item>
+   <mat-list-item (click)="goTo('diary')">
+    <mat-icon>information</mat-icon>&nbsp;
+    <span>Dnevnik</span>
+   </mat-list-item>
+   <mat-list-item (click)="goTo('exersise')">
+    <mat-icon>information</mat-icon>&nbsp;
+    <span>Predlozi vjezbi</span>
+   </mat-list-item>
+   <mat-list-item (click)="logout()">
+    <mat-icon>logout</mat-icon>&nbsp;
+    <span>Odjavi se</span>
+   </mat-list-item>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+    <button mat-button (click)="sidenav.toggle()">
+        <mat-icon style="color: white;">menu</mat-icon>
+    </button>
+    </mat-sidenav-content>
+</mat-sidenav-container>

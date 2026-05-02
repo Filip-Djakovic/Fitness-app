@@ -1,0 +1,60 @@
+<form class="programms-form-stacked" [formGroup]="programmsForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name">
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Price</mat-label>
+      <input matInput type="number" formControlName="price">
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Level</mat-label>
+      <input matInput type="number" formControlName="level">
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Time</mat-label>
+      <input matInput type="number" formControlName="time">
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Description</mat-label>
+      <textarea matInput formControlName="description"></textarea>
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Contact</mat-label>
+      <input matInput formControlName="contact">
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Category</mat-label>
+      <mat-select formControlName="category">
+        <mat-option *ngFor="let cat of categories" [value]="cat">{{cat.name}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Location</mat-label>
+      <mat-select formControlName="location">
+        <mat-option *ngFor="let loc of locations" [value]="loc">{{loc.name}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Instructor</mat-label>
+      <mat-select formControlName="instructor">
+        <mat-option *ngFor="let inst of instructors" [value]="inst">{{inst.name}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  
+    <div class="image-upload">
+      <label for="file">Upload Image</label>
+      <input type="file" id="file" (change)="onFileSelected($event)">
+    </div>
+  
+    <button mat-raised-button color="primary" type="submit">Save Program</button>
+  </form>
+  
